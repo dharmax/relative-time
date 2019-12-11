@@ -1,12 +1,24 @@
 {
-  "name": "relative-ime",
+  "name": "relativeTime",
   "version": "1.0.0",
-  "description": "Convert a time difference into a friendly, displayable string ",
-  "main": "index.js",
+  "description": "",
+  "main": "src/relative-time.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dharmax/relative-time.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dharmax/relative-time/issues"
+  },
+  "homepage": "https://github.com/dharmax/relative-time#readme",
+  "devDependencies": {
+    "typescript": "^3.7.3"
+  }
 }
