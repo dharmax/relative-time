@@ -2,17 +2,25 @@
   "name": "relativeTime",
   "version": "1.0.0",
   "description": "",
-  "main": "src/relative-time.ts",
+  "main": "lib/relative-time.js",
+  "types": "lib/relative-time.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dharmax/relative-time.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "time",
+    "date",
+    "friendly",
+    "difference",
+    "elapsed"
+  ],
+  "author": "Avi Tshuva, dharmax",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dharmax/relative-time/issues"
