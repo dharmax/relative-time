@@ -1,7 +1,7 @@
 {
-  "name": "relative-time",
+  "name": "short-relative-time",
   "version": "1.0.0",
-  "description": "",
+  "description": "Converts a time difference to a friendly string. Zero dependencies. TypeScript.",
   "main": "lib/relative-time.js",
   "types": "lib/relative-time.d.ts",
   "scripts": {
