@@ -13,12 +13,12 @@ export function relativeTime(t1: Date, t2?: Date, gross = true, language = 'en')
     }
     const diffInMinutes = (t1.getTime() - t2.getTime()) / 60000
     const timeParts = [
-        {Year: Math.round(diffInMinutes / 60 / 24 / 30 / 12)},
-        {Month: Math.round(diffInMinutes / 60 / 24 / 30)},
-        {Week: Math.round(diffInMinutes / 60 / 24 / 7)},
-        {Day: Math.round(diffInMinutes / 60 / 24)},
-        {Hour: Math.round(diffInMinutes / 60)},
-        {Minute: Math.ceil(diffInMinutes / 5) * 5}
+        {Year: Math.floor(diffInMinutes / 60 / 24 / 30 / 12)},
+        {Month: Math.floor(diffInMinutes / 60 / 24 / 30)},
+        {Week: Math.floor(diffInMinutes / 60 / 24 / 7)},
+        {Day: Math.floor(diffInMinutes / 60 / 24)},
+        {Hour: Math.floor(diffInMinutes / 60)},
+        {Minute: Math.round(diffInMinutes / 5) * 5}
     ]
     let result = ''
     let levels = 2
@@ -33,5 +33,13 @@ export function relativeTime(t1: Date, t2?: Date, gross = true, language = 'en')
         if (gross || !--levels)
             break
     }
-    return result.length ? result + ' ago' : ''
+    if (!result.length)
+        return ''
+    switch (language) {
+        case 'en':
+            return result + ' ago'
+        case 'he':
+            return `${result} לפני`
+    }
+
 }
