@@ -5,4 +5,4 @@
  * @param gross - either more accurate or more gross
  * @param language (currently english only)
  */
-export declare function relativeTime(t1: Date, t2?: Date, gross?: boolean, language?: string): string;
+export declare function relativeTime(t1: Date, t2?: Date, gross?: boolean, language?: string): string | undefined;
